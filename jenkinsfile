@@ -16,6 +16,22 @@ stages {
           }
                 }
 
-        }
+stage('build') {
+    steps {
+   sh 'mvn clean package'
+    }
+  }
+
+  stage('push') {
+    steps {
+      echo 'pushed'
+    }
+
+   
+  }
+        
+
+
+}
         
 }
